@@ -1,0 +1,659 @@
+/* ==========================================
+   OLIVE AI
+   olive1.css
+========================================== */
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    background: #222;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    transition: background 0.25s ease;
+}
+
+
+/* ==========================================
+   MAIN CHAT
+========================================== */
+
+#chat {
+
+    width: 700px;
+    height: 600px;
+
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+
+    background: #333;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 25px rgba(0, 0, 0, 0.4);
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+#header {
+
+    width: 100%;
+    height: 60px;
+
+    flex: 0 0 60px;
+
+    background: #444;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+#title {
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+#status {
+
+    margin-left: auto;
+
+    color: #7CFC00;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   MESSAGES AREA
+========================================== */
+
+#messages {
+
+    width: 100%;
+
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+
+/* ==========================================
+   ALL MESSAGE BUBBLES
+========================================== */
+
+#messages .ai,
+#messages .user {
+
+    display: block;
+
+    box-sizing: border-box;
+
+    height: auto;
+
+    min-height: 0;
+
+    flex: 0 0 auto;
+
+    padding: 12px 16px;
+
+    margin: 0;
+
+    border-radius: 18px;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+
+    word-break: normal;
+}
+
+
+/* ==========================================
+   AI MESSAGE
+========================================== */
+
+#messages .ai {
+
+    align-self: flex-start;
+
+    width: auto;
+
+    max-width: 75%;
+
+    background: #555;
+
+    color: white;
+}
+
+
+/* ==========================================
+   USER MESSAGE
+========================================== */
+
+#messages .user {
+
+    align-self: flex-end;
+
+    width: auto;
+
+    max-width: 75%;
+
+    background: #08aa61;
+
+    color: black;
+}
+
+
+/* ==========================================
+   MESSAGE NAME
+========================================== */
+
+.message-name {
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    min-height: 0;
+
+    margin: 0 0 4px 0;
+
+    padding: 0;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    opacity: 0.75;
+}
+
+
+/* ==========================================
+   MESSAGE TEXT
+========================================== */
+
+.message-text {
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    min-height: 0;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   INPUT AREA
+========================================== */
+
+#inputArea {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: #3a3a3a;
+}
+
+
+/* ==========================================
+   INPUT
+========================================== */
+
+#userInput {
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    width: 0;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: white;
+
+    color: #111;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 50px;
+}
+
+
+#userInput::placeholder {
+
+    color: #777;
+}
+
+
+/* ==========================================
+   SEND BUTTON
+========================================== */
+
+#sendButton {
+
+    flex: 0 0 auto;
+
+    width: 90px;
+
+    height: 50px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #08aa61;
+
+    color: black;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+#sendButton:hover {
+
+    transform: scale(1.03);
+}
+
+
+#sendButton:active {
+
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   CLEAR BUTTON
+========================================== */
+
+#clearButton {
+
+    flex: 0 0 auto;
+
+    width: 75px;
+
+    height: 50px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #08aa61;
+
+    color: black;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+#clearButton:hover {
+
+    transform: scale(1.03);
+}
+
+
+#clearButton:active {
+
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+#messages::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+
+#messages::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+
+#messages::-webkit-scrollbar-thumb {
+
+    background: #777;
+
+    border-radius: 10px;
+}
+
+
+#messages::-webkit-scrollbar-thumb:hover {
+
+    background: #888;
+}
+
+
+/* ==========================================
+   LIGHT MODE
+========================================== */
+
+body.light-mode {
+
+    background: #f2f2f2;
+}
+
+
+body.light-mode #chat {
+
+    background: white;
+
+    box-shadow:
+        0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+
+body.light-mode #header {
+
+    background: #e5e5e5;
+
+    color: #111;
+}
+
+
+body.light-mode #status {
+
+    color: #228B22;
+}
+
+
+body.light-mode #messages {
+
+    background: white;
+}
+
+
+body.light-mode #messages .ai {
+
+    background: #eeeeee;
+
+    color: #111;
+}
+
+
+body.light-mode #messages .user {
+
+    background: #08aa61;
+
+    color: black;
+}
+
+
+body.light-mode #inputArea {
+
+    background: #e5e5e5;
+}
+
+
+body.light-mode #userInput {
+
+    background: white;
+
+    color: #111;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 740px) {
+
+    body {
+
+        padding: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    #chat {
+
+        width: 100%;
+        height: 100%;
+
+        max-width: none;
+        max-height: none;
+
+        border-radius: 16px;
+    }
+
+
+    #header {
+
+        padding: 0 15px;
+    }
+
+
+    #title {
+
+        font-size: 20px;
+    }
+
+
+    #status {
+
+        display: none;
+    }
+
+
+    #messages {
+
+        padding: 15px;
+
+        gap: 8px;
+    }
+
+
+    #messages .ai,
+    #messages .user {
+
+        max-width: 85%;
+
+        padding: 10px 14px;
+
+        font-size: 15px;
+    }
+
+
+    .message-text {
+
+        font-size: 15px;
+
+        line-height: 1.35;
+    }
+
+
+    #inputArea {
+
+        min-height: 80px;
+
+        padding: 15px;
+
+        gap: 8px;
+    }
+
+
+    #userInput {
+
+        height: 45px;
+
+        font-size: 16px;
+
+        line-height: 45px;
+    }
+
+
+    #sendButton {
+
+        width: 70px;
+
+        height: 45px;
+
+        padding: 0 12px;
+    }
+
+
+    #clearButton {
+
+        width: 65px;
+
+        height: 45px;
+
+        padding: 0 10px;
+    }
+
+}
